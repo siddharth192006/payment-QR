@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script> <!-- QR Code Library -->
+    <link rel="stylesheet" href="style.css"> <!-- Linking the external CSS file -->
+    <style>
+        /* Upper banner styling for AdSense */
+        .ad-banner {
+            background-color: #f1f1f1; /* Light grey background */
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        /* Container styling */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #e6b8b8;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Google AdSense Upper Banner -->
+    <div class="ad-banner">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; width:100%; height:90px;" <!-- Adjust height as needed -->
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" <!-- Replace with your AdSense client ID -->
+             data-ad-slot="XXXXXXXXXX" <!-- Replace with your Ad slot ID -->
+             data-ad-format="rectangle" <!-- or "auto", adjust to your preference -->
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="container">
+        <h1>UPI Payment</h1>
+        <form id="paymentForm">
+            <input type="text" id="amount" placeholder="Enter Amount in ₹" required>
+            <br>
+            <button type="submit">Generate UPI QR Code</button>
+        </form>
+        <canvas id="qrCanvas"></canvas>
+        <button id="downloadButton">Download QR Code</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Your JavaScript file -->
+</body>
+</html>
+
